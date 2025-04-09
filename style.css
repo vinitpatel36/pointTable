@@ -1,0 +1,226 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* System fonts */
+    line-height: 1.5; /* Slightly reduced */
+    margin: 15px; /* Reduced margin */
+    background-color: #f4f4f4;
+    color: #333;
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling on iOS */
+}
+
+h1, h2 {
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 15px; /* Reduced margin */
+}
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.4em; }
+
+section {
+    background: #fff;
+    padding: 15px; /* Reduced padding */
+    margin-bottom: 15px; /* Reduced margin */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Container to handle table overflow on small screens */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scroll */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+table {
+    width: 100%;
+    min-width: 700px; /* Minimum width before scrollbar appears */
+    border-collapse: collapse;
+    margin-top: 10px; /* Reduced margin */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px; /* Reduced padding */
+    text-align: center;
+    white-space: nowrap; /* Prevent headers/data from wrapping */
+    font-size: 0.95em;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600; /* Slightly bolder */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* --- Form Styles --- */
+#result-entry form {
+    display: grid;
+    gap: 12px; /* Slightly reduced gap */
+    max-width: 550px; /* Slightly smaller max-width */
+    margin: 0 auto;
+}
+
+#result-entry label {
+    font-weight: 600; /* Slightly bolder */
+    font-size: 0.9em; /* Slightly smaller */
+    margin-bottom: -5px; /* Tighten space below label */
+}
+
+#result-entry select,
+#result-entry input[type="number"],
+#result-entry button {
+    padding: 9px; /* Slightly reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+#result-entry input[type="number"] {
+     width: 55px; /* Slightly smaller */
+     text-align: center;
+}
+
+#result-entry fieldset {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 15px; /* Adjusted padding */
+    margin-top: 5px;
+}
+
+#result-entry fieldset legend {
+    font-weight: 600;
+    padding: 0 5px;
+    font-size: 0.95em;
+}
+
+#result-entry fieldset div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 8px; /* Reduced margin */
+}
+#result-entry fieldset div label {
+    min-width: 45px; /* Slightly smaller */
+    font-weight: normal; /* Normal weight for set labels */
+     font-size: 0.9em;
+}
+#result-entry fieldset div span {
+     color: #666;
+}
+
+#result-entry button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.05em;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+#result-entry button:hover {
+    background-color: #218838;
+}
+
+#reset-data-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#reset-data-button:hover {
+     background-color: #c82333;
+}
+
+.message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.9em;
+}
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.message.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+        line-height: 1.4;
+    }
+    h1 { font-size: 1.6em; }
+    h2 { font-size: 1.3em; }
+
+    section {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    th, td {
+        padding: 5px; /* Further reduce padding */
+        font-size: 0.85em; /* Reduce font size */
+    }
+
+    /* Adjust min-width if necessary based on content */
+    table {
+         min-width: 650px; /* Adjust based on testing */
+    }
+
+    #result-entry form {
+        gap: 10px;
+    }
+
+    #result-entry select,
+    #result-entry input[type="number"],
+    #result-entry button {
+        padding: 8px;
+    }
+     #result-entry input[type="number"] {
+         width: 50px;
+    }
+     #result-entry fieldset div label {
+        min-width: 40px;
+     }
+}
+
+@media (max-width: 480px) {
+     h1 { font-size: 1.4em; }
+     h2 { font-size: 1.2em; }
+
+     th, td {
+         font-size: 0.8em; /* Even smaller font on very small screens */
+         padding: 4px;
+     }
+     table {
+         min-width: 600px; /* Further adjust */
+     }
+}
